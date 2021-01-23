@@ -44,7 +44,7 @@ router.post("/login", function (req, res) {
         let token = jwt.sign({id:user.id}, process.env.JWT_SECRET,{expiresIn:"1d"})
         res.status(200).json({
           user: user,
-          message: "Sucessfully authenticated  user",
+          message: "Sucessfully authenticated user",
           sessionToken: token
         })
       } else {
